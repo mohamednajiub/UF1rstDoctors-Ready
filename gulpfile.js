@@ -28,7 +28,6 @@ gulp.task('scripts', () => {
             'node_modules/popper.js/dist/umd/popper.min.js',
             'js/*.js'
         ])
-        .pipe(uglify())
         .pipe(gulp.dest('./build/js'));
 });
 

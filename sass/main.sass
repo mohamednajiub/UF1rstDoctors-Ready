@@ -1,17 +1,85 @@
 $primery-color: #353535;
 $bigger-font: 20px;
 
-footer
-    background: $primery-color
-    color: #fff
-    a
-        font-size: $bigger-font
-        color: #fff
-        &:hover
-            text-decoration: none
-            color: #fff
-            
 
+/* partners style */
+#wrapper
+  position: relative
+  width: 100%
+  min-height: 55vw
+  overflow: hidden
+
+.layer
+  position: absolute
+  width: 100vw
+  min-height: 55vw
+  overflow: hidden
+  .content-wrap
+    position: absolute
+    width: 100vw
+    min-height: 55vw
+  .content-body
+    width: 25%
+    position: absolute
+    top: 50%
+    text-align: center
+    transform: translateY(-50%)
+    color: #fff
+  img
+    position: absolute
+    width: 35%
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  h1
+    font-size: 2em
+
+.bottom
+  background: #222
+  z-index: 1
+  .content-body
+    right: 5%
+  h1
+    color: #FDAB00
+
+.top
+  background: #eee
+  color: #222
+  z-index: 2
+  width: 50vw
+  .content-body
+    left: 5%
+    color: #222
+
+.handle
+  position: absolute
+  height: 100%
+  display: block
+  background-color: #FDAB00
+  width: 5px
+  top: 0
+  left: 50%
+  z-index: 3
+
+.skewed
+  .handle
+    top: 50%
+    transform: rotate(30deg) translateY(-50%)
+    height: 200%
+    transform-origin: top
+  .top
+    transform: skew(-30deg)
+    margin-left: -1000px
+    width: calc(50vw + 1000px)
+    .content-wrap
+      transform: skew(30deg)
+      margin-left: 1000px
+
+@media (max-width: 768px)
+  body
+    font-size: 75%
+
+  
 /* override position and transform in 3.3.x */
 .carousel-inner
   .carousel-item-right.active, .carousel-item-next
@@ -22,3 +90,15 @@ footer
     transform: translateX(0)
   .carousel-item.active, .carousel-item-next, .carousel-item-prev
     display: flex
+
+// footer style
+footer
+  background: $primery-color
+  color: #fff
+  a
+    font-size: $bigger-font
+    color: #fff
+    &:hover
+      text-decoration: none
+      color: #fff
+            
