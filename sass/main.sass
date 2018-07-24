@@ -1,0 +1,24 @@
+$primery-color: #353535;
+$bigger-font: 20px;
+
+footer
+    background: $primery-color
+    color: #fff
+    a
+        font-size: $bigger-font
+        color: #fff
+        &:hover
+            text-decoration: none
+            color: #fff
+            
+
+/* override position and transform in 3.3.x */
+.carousel-inner
+  .carousel-item-right.active, .carousel-item-next
+    transform: translateX(33.33%)
+  .carousel-item-left.active, .carousel-item-prev
+    transform: translateX(-33.33%)
+  .carousel-item-right, .carousel-item-left
+    transform: translateX(0)
+  .carousel-item.active, .carousel-item-next, .carousel-item-prev
+    display: flex
