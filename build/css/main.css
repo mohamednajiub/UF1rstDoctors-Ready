@@ -1,6 +1,8 @@
-.about p {
-  font-size: 18px;
-  line-height: 1.7; }
+.about {
+  background-color: #F7FCFE; }
+  .about p {
+    font-size: 18px;
+    line-height: 1.7; }
 
 /* team style */
 .team .member {
@@ -91,7 +93,7 @@
     color: #387ABE; }
 
 .top {
-  background: #eee;
+  background: #F7FCFE;
   color: #222;
   z-index: 2;
   width: 50vw; }
@@ -123,10 +125,6 @@
     transform: skew(30deg);
     margin-left: 1000px; }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 75%; } }
-
 /* override position and transform in 3.3.x */
 .partners .carousel .carousel-indicators {
   position: relative; }
@@ -144,3 +142,12 @@ footer {
     footer a:hover {
       text-decoration: none;
       color: #fff; }
+
+.about h2, .team h2, .partners h2 {
+  color: #387ABE;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  font-weight: bold; }
+  .about h2::first-letter, .team h2::first-letter, .partners h2::first-letter {
+    text-decoration: underline;
+    text-decoration-color: #FFB700; }

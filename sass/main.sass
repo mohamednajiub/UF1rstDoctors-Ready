@@ -1,11 +1,14 @@
 $primery-dark-color: #353535;
 $primary-blue-color: #387ABE;
+$second-blue-color: #F7FCFE;
+$primary-font: 'Raleway', sans-serif;
 $bigger-font: 20px;
 $medium-font: 18px;
 $small-font: 15px;
 
 // about style
 .about
+  background-color: $second-blue-color
   p
     font-size: $medium-font
     line-height: 1.7
@@ -101,7 +104,7 @@ $small-font: 15px;
     color: $primary-blue-color
 
 .top
-  background: #eee
+  background: $second-blue-color
   color: #222
   z-index: 2
   width: 50vw
@@ -133,10 +136,6 @@ $small-font: 15px;
       transform: skew(30deg)
       margin-left: 1000px
 
-@media (max-width: 768px)
-  body
-    font-size: 75%
-
   
 /* override position and transform in 3.3.x */
 .partners
@@ -144,9 +143,8 @@ $small-font: 15px;
     .carousel-indicators
       position: relative
       li
-        
+
         background-color: $primary-blue-color
-        $primary-blue-color
       .active
         background-color: #000
 
@@ -161,3 +159,13 @@ footer
       text-decoration: none
       color: #fff
             
+// grouping style
+.about, .team, .partners
+  h2
+    color: $primary-blue-color
+    font-family: $primary-font
+    text-transform: capitalize
+    font-weight: bold
+    &::first-letter
+      text-decoration: underline
+      text-decoration-color: #FFB700
