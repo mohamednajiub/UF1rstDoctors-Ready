@@ -20,7 +20,7 @@ $('#recipeCarousel').carousel({
   interval: 5000
 });
 
-$('.carousel .carousel-item').each(function () {
+$('#recipeCarousel .carousel .carousel-item').each(function () {
   var next = $(this).next();
   if (!next.length) {
     next = $(this).siblings(':first');

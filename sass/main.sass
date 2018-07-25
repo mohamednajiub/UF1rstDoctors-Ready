@@ -1,7 +1,65 @@
-$primery-color: #353535;
+$primery-dark-color: #353535;
+$primary-blue-color: #387ABE;
 $bigger-font: 20px;
+$medium-font: 18px;
+$small-font: 15px;
+
+// about style
+.about
+  p
+    font-size: $medium-font
+    line-height: 1.7
 
 
+/* team style */
+.team
+  .member
+    transition: 0.3s
+    position: relative
+    height: 400px
+    border: 1px solid $primary-blue-color
+    overflow: hidden
+    &:hover
+      .info-container
+        top: 40%
+      @media (min-width: 576px) and (max-width: 768px)
+        .info-container
+          top: 30%
+      @media (min-width: 768px) and (max-width: 992px)
+        .info-container
+          top: 30%
+      @media (min-width: 992px) and (max-width: 1200px)
+        .info-container
+          top: 30%
+    .member-image
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 1
+      img
+        width: 100%
+        height: 100%
+    .info-container
+      position: absolute
+      z-index: 2
+      background-color: #fff
+      top: 150%
+      transform: skewY(-13deg)
+      transition: 0.3s
+      height: 100%
+      font-size: $small-font
+      .member-info
+        transition: 0.3s
+        transform: skewY(13deg)
+        margin-top: 30px
+        padding: 10px
+        p
+          transition: 0.3s
+        a
+          color: #000
+          &:hover
+            text-decoration: none
+            color: #000
 /* partners style */
 #wrapper
   position: relative
@@ -40,7 +98,7 @@ $bigger-font: 20px;
   .content-body
     right: 5%
   h1
-    color: #FDAB00
+    color: $primary-blue-color
 
 .top
   background: #eee
@@ -55,7 +113,7 @@ $bigger-font: 20px;
   position: absolute
   height: 100%
   display: block
-  background-color: #FDAB00
+  background-color: $primary-blue-color
   width: 5px
   top: 0
   left: 50%
@@ -81,19 +139,20 @@ $bigger-font: 20px;
 
   
 /* override position and transform in 3.3.x */
-.carousel-inner
-  .carousel-item-right.active, .carousel-item-next
-    transform: translateX(33.33%)
-  .carousel-item-left.active, .carousel-item-prev
-    transform: translateX(-33.33%)
-  .carousel-item-right, .carousel-item-left
-    transform: translateX(0)
-  .carousel-item.active, .carousel-item-next, .carousel-item-prev
-    display: flex
+.partners
+  .carousel
+    .carousel-indicators
+      position: relative
+      li
+        
+        background-color: $primary-blue-color
+        $primary-blue-color
+      .active
+        background-color: #000
 
 // footer style
 footer
-  background: $primery-color
+  background: $primery-dark-color
   color: #fff
   a
     font-size: $bigger-font
