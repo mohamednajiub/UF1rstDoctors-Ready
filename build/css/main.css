@@ -58,48 +58,80 @@
   width: 100%;
   min-height: 55vw;
   overflow: hidden; }
+  @media (max-width: 576px) {
+    #wrapper {
+      min-height: 500px;
+      height: 600px; } }
 
 .layer {
   position: absolute;
   width: 100vw;
   min-height: 55vw;
   overflow: hidden; }
+  @media (max-width: 576px) {
+    .layer {
+      min-height: 500px;
+      height: 600px; } }
   .layer .content-wrap {
     position: absolute;
     width: 100vw;
     min-height: 55vw; }
-  .layer .content-body {
-    width: 25%;
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    transform: translateY(-50%);
-    color: #fff; }
-  .layer img {
-    position: absolute;
-    width: 35%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .layer h1 {
-    font-size: 2em; }
+    @media (max-width: 576px) {
+      .layer .content-wrap {
+        min-height: 500px;
+        height: 600px; } }
+    .layer .content-wrap .content-body {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      transform: translateY(-50%);
+      color: #fff; }
+      @media (max-width: 576px) {
+        .layer .content-wrap .content-body {
+          width: 90%;
+          height: 100%;
+          left: 6%;
+          font-size: 15px;
+          transform: none;
+          top: 0; } }
+    .layer .content-wrap .image-container {
+      position: absolute;
+      width: 35%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      @media (max-width: 576px) {
+        .layer .content-wrap .image-container {
+          width: 100%;
+          height: auto;
+          left: 0;
+          bottom: 0;
+          transform: none; } }
+  .layer h3 {
+    font-size: 30px; }
 
 .bottom {
   background: #222;
   z-index: 1; }
   .bottom .content-body {
     right: 5%; }
-  .bottom h1 {
+    @media (max-width: 576px) {
+      .bottom .content-body {
+        right: 0 !important; } }
+  .bottom h3 {
     color: #387ABE; }
 
 .top {
   background: #F7FCFE;
-  color: #222;
   z-index: 2;
   width: 50vw; }
   .top .content-body {
     left: 5%;
-    color: #222; }
+    color: #222 !important; }
+    @media (max-width: 576px) {
+      .top .content-body {
+        left: 0; } }
 
 .handle {
   position: absolute;
@@ -108,8 +140,11 @@
   background-color: #387ABE;
   width: 5px;
   top: 0;
-  left: 50%;
+  left: 49.5%;
   z-index: 3; }
+  @media (max-width: 576px) {
+    .handle {
+      left: 48%; } }
 
 .skewed .handle {
   top: 50%;
