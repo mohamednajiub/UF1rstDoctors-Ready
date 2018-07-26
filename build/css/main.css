@@ -133,6 +133,9 @@
   .partners .carousel .carousel-indicators .active {
     background-color: #000; }
 
+.contact {
+  background: #F7FCFE; }
+
 footer {
   background: #353535;
   color: #fff; }
@@ -143,11 +146,11 @@ footer {
       text-decoration: none;
       color: #fff; }
 
-.about h2, .team h2, .partners h2 {
+.about h2, .team h2, .partners h2, .contact h2 {
   color: #387ABE;
   font-family: "Raleway", sans-serif;
   text-transform: capitalize;
   font-weight: bold; }
-  .about h2::first-letter, .team h2::first-letter, .partners h2::first-letter {
+  .about h2::first-letter, .team h2::first-letter, .partners h2::first-letter, .contact h2::first-letter {
     text-decoration: underline;
     text-decoration-color: #FFB700; }
