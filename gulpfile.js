@@ -58,7 +58,7 @@ gulp.task('watch', () => {
         'sass/**/*.sass'
     ], ['styles']);
     gulp.watch('js/*.js', ['scripts']);
-    gulp.watch('img/*', ['image']);
+    gulp.watch('img/**/*', ['image']);
 });
 
 

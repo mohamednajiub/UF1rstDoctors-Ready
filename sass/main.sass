@@ -13,7 +13,9 @@ $small-font: 15px;
     font-size: $medium-font
     line-height: 1.7
 
-
+// main activities style
+.main-activities
+  background-color: $second-blue-color
 /* team style */
 .team
   .member
@@ -167,6 +169,27 @@ $small-font: 15px;
   
 /* override position and transform in 3.3.x */
 .partners
+  .gold, .silver,.media-sponsers
+    .image-container
+      position: relative
+      &:hover
+        .overlay
+          display: block
+      .overlay
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 30px
+        width: 100%
+        display: none
+        background-color: rgba(0,0,0,0.6)
+        ul
+          a
+            margin: 10px
+            color: #fff
+            &:hover
+              text-decoration: none
+              color: #fff 
   .carousel
     .carousel-indicators
       position: relative
@@ -189,7 +212,7 @@ footer
       color: #fff
             
 // grouping style
-.about, .team, .partners, .contact
+.about,.vision,.main-activities, .team, .partners, .contact
   h2
     color: $primary-blue-color
     font-family: $primary-font
